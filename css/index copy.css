@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway&display=swap');
+:root{
+    --main-fontfamily: 'Montserrat', sans-serif;
+    
+    --main-bg-color: #2D91EE;
+
+    --text-fontfamily: 'Raleway', sans-serif;
+
+}
+body{
+    margin: 0;
+    height: 100%;
+}
+header{
+   
+   
+    background-color: var(--main-bg-color);
+    color: white;
+}
+header ul{
+   
+    margin: 0;
+    list-style: none;
+    
+  
+}
+header ul a{
+    text-decoration: none;
+    color: white;
+}
+header li{
+    font-family: var(--main-fontfamily);
+    font-weight: 400;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+    padding-left: 0.5em;
+    font-size: 1.1em;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 10%;
+}
+header li:hover{
+    background-color: #2884DB;
+    color: white;
+   
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+.dropdown-content {
+    display: none;
+    position: absolute;
+    color: black;
+    background-color: white;
+    min-width: 20vw;
+    
+    left: 11.5vw;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .menu-bar__li{
+    color: black;
+    background-color: var(--main-bg-color);
+    text-align: center;
+    padding: 1.2vh 0;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+  }
+  
+  .show {display: block;}
+  #btn-menu{
+      z-index: 20;
+  }
+  header label{
+      display: none;
+      width: 1rem;
+      height: 2rem;
+      padding-bottom: 1rem;
+
+  }
+.header{
+    background-color: rgba(0,0,0,0.8);
+    background-position:center center;
+    background-repeat: no-repeat;
+    
+    background-image:url(../img/odontologia.jpg);
+    background-size: 100vw 100vh;
+    height: 600px;
+    max-width: 100%;
+    filter:brightness(0.4);
+    position: relative;
+    z-index: 1;
+  }
+
+.header-title{
+    font-family: var(--main-fontfamily);
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 40vh;
+    left: 23vw;
+    z-index: 2;
+    font-size: 1.2em;
+}
+.primeralinea{
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    background: black;
+    border: none;
+    height: 3px;
+    z-index: 2;
+}
+.segundalinea{
+    position: absolute;
+    width: 100%;
+    margin: 0;
+    background: black;
+    border: none;
+    height: 1vh;
+    z-index: 2;
+}
+.terceralinea{
+    margin-top: 15vh;
+    width: 40vw;
+}
+.cuartalinea{
+    margin-top: 10vh;
+    width: 20vw;
+}
+.riesgo{
+    padding-top:5rem;
+    padding-bottom: 10rem;
+    position: relative;
+    height: 20rem;
+}
+.riesgo__text{
+    
+    position: absolute;
+    width: 50vw;
+    padding-left:40vw;
+
+}
+.riesgo__img{
+    position: absolute;
+    width: 35vw;
+    float: left;
+    padding-top:5vh;
+    padding-left: 1vw;
+}
+
+.reduccion{
+    padding: 5rem 0;
+    text-align: center;
+    position: relative;
+    display: block;
+}
+
+h2{
+    font-family: var(--main-fontfamily);
+}
+
+p{
+    font-family: var(--text-fontfamily);
+    text-align: justify;
+}
+
+@media only screen and (max-width: 700px)
+{
+    
+    header label{
+        display: block;
+    }
+    .menu-bar{
+        position: absolute;
+        top: 5rem;
+        z-index: 12;
+        margin-left: 20%;
+        width: 40%;
+    }
+    #btnmenu:checked ~.menu-bar{
+        color: black;
+        display: block;
+        z-index: 12;
+        left: 50%;
+        width: 80%;
+    }
+    header li{
+        font-family: var(--main-fontfamily);
+        font-weight: 400;
+        padding-top: 1%;
+        padding-bottom: 1%;
+        text-align: center;
+        padding-left: 0.1em;
+        font-size: 1.1em;
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        width:100%;
+        
+    }
+    
+
+    
+}

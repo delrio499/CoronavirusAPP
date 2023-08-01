@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+ integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"> </script>
+
+    <script>
+      fetch("https://pomber.github.io/covid19/timeseries.json")
+  .then(response => response.json())
+  .then(data => {
+    data["Colombia"].forEach(({ date, confirmed, recovered, deaths }) =>
+     document.getElementById("casos").innerHTML = confirmed
+    );
+    data["Colombia"].forEach(({ date, confirmed, recovered, deaths }) =>
+     document.getElementById("recuperados").innerHTML = recovered
+    );
+  });
+    </script>
+   
+</head>
+<body>
+  
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light navbar2" >
+        <a class="navbar-brand" href="#" id="inicio">COVID-19 Colombia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#riesgo">Riesgo <span class="sr-only">(current)</span></a>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               Reducción de 
+               Riesgos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#lavado">Lavado de Manos</a>
+                <a class="dropdown-item" href="#medidas">Medidas de protección</a>
+                <a class="dropdown-item" href="#superficies">Desinfección de las Superficies</a>
+                <a class="dropdown-item" href="#test">Evaluación del paciente</a>
+                
+              </div>
+            </li>
+           
+          </ul>
+        </div>
+          <div class="casos">
+          <p class="otros">Casos: <p id="casos" class="data"></p>
+          Recuperados: <p id="recuperados" class="data"></p></p>
+          </div>
+      </nav>
+           
+           
+    </header>
+  
+    <div class="header"></div>
+    <div class="header-title">
+        <h1>¿Cómo reducir el riesgo de INFECCIÓN  <br>nosocomial en espacios Odontológicos <br> para evitar el virus COVID-19 ?</h1>
+    </div>
+      
+      
+      <hr class="terceralinea">
+      <hr class="cuartalinea">
+      <!-- PRIMERA seccion -->
+    <div  class="riesgo">
+      
+      <h2 id="riesgo">Riesgo de infección nosocomial en espacios odontológicos</h2>
+      <div class="riesgo__text">
+      <p>Debido a las características únicas de los procedimientos odontológicos los cuales generan una gran cantidad de gotas y aerosoles, las medidas de protección estándar en la práctica clínica diaria no son lo suficientemente efectivas para prevenir la transmisión de SARS-CoV-29. Sin embargo, todas las medidas de bioseguridad deben mantenerse y controlar su ejecución rigurosamente.</p>
+      
+      <p>Los odontólogos están expuestos directamente a la inhalación de partículas virales en aerosoles (donde el virus puede permanecer viable por hasta 3 horas), especialmente cuando los pacientes están en el período de incubación, sin saber que están infectados, o eligen ocultar su infección, poniendo en un alto riesgo al personal que labora en el espacio odontológico. Por lo tanto, es perentorio, que los odontólogos refinan estrategias preventivas así como disminuyan su actividad a estrictas emergencias para cortar la cadena de contagio.</p>
+      <p>Escriba las medidas de protección particulares (no las universales) que se deben tomar en este momento e informe a todo su personal. Explique de forma clara y concisa las implicaciones de romper los protocolos de atención odontológica.</p>
+      </div>
+      <div data-aos="fade-right"><img src="img/riesgo.jpg"  class="riesgo__img" alt=""></div>
+    </div>
+    <h1 class="reduccion">REDUCCION DE RIESGOS</h1>
+    <!-- SEGUNDA seccion -->
+    <div  class="riesgo">
+      
+        <h2 id="lavado">Lavado de manos</h2>
+        <div class="riesgo__text">
+        <p>Lavarse las manos es la medida más contundente que se debe asumir y para ello se necesita tanto jabón como agua corriente. El uso de guantes no sustituye la higiene de las manos. El odontólogo debe elegir para su consulta jabón antimicrobiano (ejm; jabones con clorhexidina, yodo, cloroxilenol, triclosán, entre otros).</p>
+        
+        <p>El lavado de las manos debe realizarse antes y después de tocar a un paciente, antes de cualquier procedimiento odontológico, después de una posible exposición al fluido corporal del paciente y después de tocar los alrededores del paciente o elementos que pudieran estar contaminados. Asimismo, la higiene debe realizarse antes de colocarse y después de retirar las máscaras protectoras faciales (tapaboca, visera, protector ocular), antes y después de alimentarse o beber algo, antes y después del uso de sanitarios y al llegar a su residencia.</p>
+        <p>El virus muestra baja resistencia a los desinfectantes. Desinfección ultravioleta, baño de agua caliente a 56 ℃ por 30 min, desinfectantes que contienen cloro, o etanol al 75% puede inactivar eficazmente el virus. Por lo tanto, desinfectantes de manos que usan etanol como componente principal son indicados para la limpieza de manos.</p>
+        </div>
+        <div data-aos="fade-right"><img src="img/lavado.jpg"  class="riesgo__img" alt=""></div>
+    </div>
+      
+    <!-- TERCERA SECCION -->
+    <div id="medidas" class="riesgo">
+      
+        <h2>Medidas de Protección
+        </h2>
+        <div class="riesgo__text">
+        <p>Es ineludible el uso del equipo de protección de barrera, que incluye lentes protectores o viseras, tapa-boca, así como material desechable como guantes de látex o guantes de nitrilo, gorros, botas y batas quirúrgicas. Su cara debe estar completamente cubierta, use una máscara quirúrgica y protección para los ojos con protectores laterales sólidos o un protector facial completo para proteger mucosas de los ojos, nariz y boca.</p>
+        
+        <p>El uso de la máscara quirúrgica desechable, bata, gorro y botas debe ser de uso individual con cada paciente y debe desecharse una vez concluido el procedimiento odontológico con el paciente. Si durante el tratamiento la mascarilla quirúrgica se humedece, haga el recambio de inmediato. Asimismo, lave con jabón y desinfecte el equipo de protección facial antes y después de su uso por paciente</p>
+        <p>No use joyas, anillos, zarcillos (pendientes/aretes), relojes, pulseras, en los cuales pueda permanecer viable el virus. Mantenga la higiene de sus uñas, el largo adecuado y retire sistemas artificiales</p>
+        </div>
+        <div data-aos="fade-right"><img src="img/medidas.jpg"  class="riesgo__img" alt=""></div>
+    </div>
+     <!-- CUARTA SECCION -->
+     <div id="superficies" class="riesgo">
+      
+        <h2>Desinfección de todas las superficies de la clínica dental</h2>
+        <div class="riesgo__text">
+        <p>Estudios in vitro de van Doremalen et al mostraron que el SARS-CoV puede permanecer viable por 3 horas en aerosoles, 1 día en superficies de cartón, 2 días en superficies de acero inoxidable y hasta 72 horas en los plásticos.</p>
+        
+        <p>Estudios han mostrado que el uso de etanol 70%, peróxido de hidrógeno 0.5% o hipoclorito de sodio al 0.1% son efectivos para eliminar Coronavirus Humano. Otros agentes como el cloruro de benzalconio o la clorhexidina son menos efectivos.</p>
+        <p>Deben ser desinfectados los consultorios, así como las áreas comunes, incluyendo manijas de puertas, sillas y baños.</p>
+        </div>
+        <div data-aos="fade-right"><img src="img/superficies.jpg"  class="riesgo__img" alt=""></div>
+    </div>
+     <!-- QUINTA SECCION -->
+     <div id="test" class="riesgo">
+      
+        <h2>Evaluación previa del paciente</h2>
+        <div class="riesgo__text">
+        <p>Aunque algunos pacientes pueden ocultar información crucial para ser atendidos, el odontólogo debe ser insistente en un primer contacto vía telefónica. Evalué si se trata de una verdadera emergencia odontológica y si así lo fuere, instruya a su paciente a acudir a la clínica dental a la hora citada, sin acompañantes.</p>
+        
+        <p>Al ingreso a la clínica, se recomienda medir la temperatura del paciente, preguntar por la sintomatología propia del COVID-19. Pacientes con más de 38o C de temperatura se recomienda no ser atendidos, hasta que pase el estado febril. Los pacientes deben ser instruidos al lavado de manos al entrar y salir de la clínica, así como los métodos para cubrir su boca y nariz si tosen o estornudan.</p>
+        </div>
+        <div data-aos="fade-right"><img src="img/test.jpg"  class="riesgo__img" alt=""></div>
+    </div>
+
+
+    <footer>
+      <ul class="foot">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#riesgo">Riesgo de Contagio</a></li>
+        <li><a href="#lavado">Lavado de manos</a></li>
+        
+      </ul>
+      <ul>
+        <li><a href="#medidas">Medidas de protección</a></li>
+        <li><a href="#superficies">Desinfección de las superficies</a></li>
+        <li><a href="#test">Evaluación del paciente</a></li>
+      </ul>
+
+      <p class="copyright">Copyright © 2020 UDES. Desarrollador Daniel Del Rio </p>
+    </footer>
+    <!-- <div data-aos="fade-right"><img src="img/ashkan-forouzani-ignxm3E1Rg4-unsplash.jpg"  class="imagena" alt=""></div> -->
+
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
